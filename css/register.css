@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+.note {
+  width: 720px;
+  height: 455px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid #dedede;
+  border-top: 2px solid #ff0036;
+  box-sizing: border-box;
+  padding: 20px;
+  display: none; }
+  .note h3 {
+    color: #3e3e3e; }
+  .note p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 8px 0 0 5px; }
+    .note p a {
+      font-size: 14px;
+      color: #ff0036; }
+  .note input {
+    width: 140px;
+    height: 36px;
+    padding: 0 20px;
+    background: #ff0036;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+    margin-top: 8px; }
+
+.registerTop {
+  width: 990px;
+  height: 48px;
+  margin: 0 auto;
+  border-bottom: 2px solid #e6e6e6; }
+  .registerTop ul {
+    width: 720px;
+    margin: 0 auto; }
+    .registerTop ul li {
+      width: 180px;
+      height: 48px;
+      float: left;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 48px;
+      color: #9b9696; }
+      .registerTop ul li span {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 26px;
+        font-size: 14px;
+        color: white;
+        background: #9b9696;
+        margin-right: 5px; }
+    .registerTop ul li:nth-child(1) {
+      border-bottom: 2px solid #ff4700;
+      color: #3e3e3e; }
+      .registerTop ul li:nth-child(1) span {
+        background: #ff4700; }
+
+.registerBot {
+  width: 990px;
+  height: 500px;
+  margin: 0 auto;
+  box-sizing: border-box; }
+  .registerBot form .registerBotPhone {
+    display: none;
+    padding-left: 300px;
+    padding-top: 100px; }
+    .registerBot form .registerBotPhone select {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      width: 162px;
+      padding: 0 8px;
+      height: 37px;
+      line-height: 34px;
+      border: 1px solid #cccccc;
+      box-sizing: border-box;
+      color: black;
+      cursor: pointer;
+      outline: none;
+      font-weight: bold; }
+    .registerBot form .registerBotPhone div:nth-child(1) input {
+      width: 162px;
+      padding: 0 8px;
+      height: 37px;
+      line-height: 34px;
+      border: 1px solid #cccccc;
+      box-sizing: border-box;
+      color: black;
+      cursor: pointer;
+      outline: none;
+      margin-left: -5px; }
+    .registerBot form .registerBotPhone div:nth-child(1) span {
+      display: none; }
+    .registerBot form .registerBotPhone div {
+      color: #3c3c3c; }
+    .registerBot form .registerBotPhone div:nth-child(2) {
+      padding-left: 73px;
+      padding-top: 50px; }
+      .registerBot form .registerBotPhone div:nth-child(2) input {
+        width: 162px;
+        padding: 0 8px;
+        height: 37px;
+        line-height: 34px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        color: black;
+        cursor: pointer;
+        outline: none;
+        margin-left: -5px;
+        border-radius: 4px; }
+        .registerBot form .registerBotPhone div:nth-child(2) input:hover {
+          background: rgba(255, 0, 54, 0.8);
+          color: white; }
+  .registerBot form .registerBotUser {
+    display: none;
+    padding-left: 300px;
+    padding-top: 100px; }
+    .registerBot form .registerBotUser div div {
+      overflow: hidden; }
+      .registerBot form .registerBotUser div div p {
+        width: 120px;
+        text-align: right;
+        margin-right: 15px;
+        float: left; }
+      .registerBot form .registerBotUser div div span {
+        float: left; }
+    .registerBot form .registerBotUser div div:nth-child(1) {
+      margin-bottom: 30px; }
+    .registerBot form .registerBotUser div div:nth-child(2), .registerBot form .registerBotUser div div:nth-child(3), .registerBot form .registerBotUser div div:nth-child(5) {
+      margin-bottom: 20px; }
+    .registerBot form .registerBotUser div div:nth-child(1) p, .registerBot form .registerBotUser div div:nth-child(2) p, .registerBot form .registerBotUser div div:nth-child(5) p {
+      color: #545454; }
+    .registerBot form .registerBotUser div div:nth-child(1) span, .registerBot form .registerBotUser div div:nth-child(2) span, .registerBot form .registerBotUser div div:nth-child(5) span {
+      color: #b4b4b4; }
+    .registerBot form .registerBotUser div div:nth-child(3) p, .registerBot form .registerBotUser div div:nth-child(4) p {
+      color: #b4b4b4; }
+    .registerBot form .registerBotUser div div:nth-child(3) p, .registerBot form .registerBotUser div div:nth-child(4) p, .registerBot form .registerBotUser div div:nth-child(6) p {
+      line-height: 30px; }
+    .registerBot form .registerBotUser div div:nth-child(4) {
+      margin-bottom: 50px; }
+    .registerBot form .registerBotUser div div:nth-child(6) {
+      margin-bottom: 30px; }
+      .registerBot form .registerBotUser div div:nth-child(6) p {
+        color: #b4b4b4; }
+    .registerBot form .registerBotUser div input {
+      width: 200px;
+      height: 30px;
+      padding-left: 10px; }
+    .registerBot form .registerBotUser div input::-webkit-input-placeholder {
+      color: #b4b4b4; }
+    .registerBot form .registerBotUser div div:nth-child(7) {
+      padding-left: 135px; }
+      .registerBot form .registerBotUser div div:nth-child(7) input {
+        width: 150px;
+        height: 30px;
+        background: #ff0036;
+        border: 0;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer; }
+  .registerBot form .registerBotPay {
+    width: 990px;
+    height: 500px;
+    border: 1px solid #e6e6e6;
+    margin-top: 30px;
+    box-sizing: border-box;
+    display: none;
+    padding-top: 50px;
+    padding-left: 200px; }
+    .registerBot form .registerBotPay div {
+      overflow: hidden;
+      margin-bottom: 15px; }
+      .registerBot form .registerBotPay div p {
+        color: #929292;
+        float: left;
+        line-height: 30px;
+        margin-right: 15px;
+        width: 120px;
+        text-align: right; }
+      .registerBot form .registerBotPay div input {
+        float: left;
+        width: 200px;
+        height: 30px;
+        box-sizing: border-box;
+        padding-left: 10px; }
+      .registerBot form .registerBotPay div select {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        float: left;
+        width: 70px;
+        padding: 0 8px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #cccccc;
+        box-sizing: border-box;
+        color: black;
+        cursor: pointer;
+        outline: none; }
+    .registerBot form .registerBotPay #agree {
+      margin-left: 135px;
+      width: 120px;
+      height: 35px;
+      border: 0;
+      background: #00a3d2;
+      line-height: 35px;
+      color: white;
+      border-radius: 4px; }
+    .registerBot form .registerBotPay div:last-of-type {
+      margin-left: 135px;
+      font-size: 12px;
+      color: #333333;
+      margin-top: 15px; }
+      .registerBot form .registerBotPay div:last-of-type a {
+        font-size: 12px;
+        color: #3bb1d8; }
+  .registerBot form .registerBotSuc {
+    width: 990px;
+    height: 500px;
+    border: 1px solid #e6e6e6;
+    margin-top: 30px;
+    box-sizing: border-box;
+    line-height: 500px;
+    text-align: center; }
+
+/*# sourceMappingURL=register.css.map */
