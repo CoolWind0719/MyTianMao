@@ -123,13 +123,35 @@ $(function(){
     backTopBtn.onclick = function(){
         $(window).scrollTop(0);
     }
+
+    // 内容：左侧隐藏/显示
+    var moreFlag = true;
+    var jcspBtn = $("#jcspBtn");
+    var jcspUl = $("#jcspUl");
+    jcspBtn.click(function(){
+        if(moreFlag==true){
+            $(this).val("+");
+            jcspUl.css({
+                "display":"none"
+            });
+            moreFlag = false;
+        }else{
+            $(this).val("-");
+            jcspUl.css({
+                "display":"block"
+            });
+            moreFlag = true;            
+        }
+    })
+
+
     // 内容：品牌->更多
     var pinpaiMore01 = $(".pinpaiMore01");
     var pinpaiMore02 = $(".pinpaiMore02");
     var pinpaiUlMore01 = $(".pinpaiUlMore01");
     var pinpaiUlMore02 = $(".pinpaiUlMore02"); 
     var picMore = $(".picMore");
-    var moreFlag = true;
+    
     pinpaiMore01.click(function(){
         if(moreFlag==true){
             pinpaiUlMore01.show();           

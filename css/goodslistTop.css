@@ -852,6 +852,109 @@ li{
     cursor: pointer;
 }
 
+/* foot */
+
+/* footBot */
+.footBot{
+    width: 100%;
+    border-top: 1px solid #ededed;
+}
+.footBotBox{
+    width: 1490px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 32px 0 40px;
+}
+.footBotBox>img{
+    display: block;
+    float: left;
+    margin-right: 120px;
+}
+.footBotBox>ul{
+    float: left;
+}
+.footBotBox>ul>li{
+    width: 250px;
+    float: left;
+}
+.footBotBox>ul>li>p{
+    color: #646464;
+    font-weight: bold;
+    padding-bottom: 18px;
+}
+.footBotBox>ul>li>a{
+    display: block;
+    font-size: 14px;
+    color: #8b8b8b;
+    padding-bottom: 10px;
+}
+/* footNav */
+.footNav{
+    width: 100%;
+    background: #c40000;
+}
+.footNavBox{
+    width: 1490px;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    position: relative;
+}
+.footNavBox>img{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -30px;
+}
+.footNavBox>div{
+    overflow: hidden;
+}
+.footNavBox>div p{
+    margin-right: 80px;
+}
+.footNavBox>div:first-of-type{
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.footNavBox>div:nth-of-type(2){
+    padding-bottom: 20px;
+}
+.footNavBox>div:first-of-type a{
+    font-size: 12px;
+    color: white;
+    margin-right: 8px;
+}
+.footNavBox>div:nth-of-type(2) a{
+    font-size: 12px;
+    color: white;
+    padding: 0 8px 0;
+    border-right: 1px solid white;
+}
+.footNavBox>div:nth-of-type(2) a:first-child{
+    padding-left: 0;
+}
+.footNavBox>div:nth-of-type(2) a:last-child{
+    border-right: 0;
+}
+.footNavBox>div:nth-of-type(3) p,.footNavBox>div:nth-of-type(4) p,.footNavBox>div:nth-of-type(5) p,.footNavBox>div:nth-of-type(6) p{
+    font-size: 12px;
+    color: #a4a4a4;
+    float: left;
+}
+.footNavBox>div:nth-of-type(3),.footNavBox>div:nth-of-type(4),.footNavBox>div:nth-of-type(5),.footNavBox>div:nth-of-type(6){
+    padding-bottom: 12px;
+}
+.footNavBox>div:last-of-type p{
+    font-size: 12px;
+    color: #686868;
+}
+.footNavBox>div:nth-of-type(4) p:last-of-type{
+    background: url(../images/footNav02.png) no-repeat left top;
+    padding-left: 22px;
+}
+
+
+
 /* 固定右侧 */
 .rightFix{
     width: 35px;
