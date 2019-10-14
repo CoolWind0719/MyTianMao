@@ -7,3 +7,57 @@
   height: 44px;
   padding: 22px 0;
   margin: 0 auto; }
+  .header img {
+    width: 190px;
+    margin-top: 8px; }
+
+.content {
+  width: 1190px;
+  height: 600px;
+  margin: 0 auto;
+  background: url(../images/login04.jpg) no-repeat left top;
+  position: relative; }
+  .content > div {
+    width: 330px;
+    height: 316px;
+    position: absolute;
+    right: 60px;
+    top: 90px;
+    background: white;
+    padding: 40px 0 60px 30px; }
+    .content > div form p {
+      color: #3c3c3c;
+      font-weight: bold; }
+    .content > div form div {
+      margin-top: 25px; }
+    .content > div form div:nth-of-type(1), .content > div form div:nth-of-type(2) {
+      position: relative; }
+      .content > div form div:nth-of-type(1) img, .content > div form div:nth-of-type(2) img {
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        width: 40px;
+        height: 40px; }
+      .content > div form div:nth-of-type(1) input, .content > div form div:nth-of-type(2) input {
+        width: 240px;
+        font-size: 14px;
+        line-height: 18px;
+        height: 18px;
+        padding: 11px 8px 11px 50px;
+        border: 1px solid #ddd; }
+    .content > div form div:nth-of-type(3) input {
+      width: 300px;
+      height: 42px;
+      color: white;
+      font-weight: bold;
+      border: 0;
+      background: #ff0036;
+      border-radius: 4px;
+      font-size: 18px; }
+    .content > div form div:nth-of-type(4) {
+      width: 300px;
+      text-align: right; }
+      .content > div form div:nth-of-type(4) a {
+        color: #6c6c6c;
+        font-size: 12px;
+        text-decoration: none; }
