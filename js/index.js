@@ -1,4 +1,16 @@
 $(function(){
+    // nav
+    var navLeftSpan = $(".navLeftSpan")[0];
+    welcomeUser();
+    function welcomeUser(){
+        let username = getCookie("username");
+        if(username!=null){
+            navLeftSpan.innerHTML = username;
+        }else{
+            navLeftSpan.innerHTML = "喵~";
+        }
+    }
+
     // header
     // 地区选择
     // 获取元素

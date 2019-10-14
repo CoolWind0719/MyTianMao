@@ -34,6 +34,9 @@ li{
     margin-right: 26px;
     font-size: 14px;
 }
+.navLeftSpan{
+    color: red;
+}
 .navBox .navLeft a{
     float: left;
     color: #b2b2b2;

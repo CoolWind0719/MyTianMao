@@ -41,6 +41,12 @@ li {
     color: white;
     margin-top: 8px; }
 
+.liactive {
+  border-bottom: 2px solid #ff4700;
+  color: #3e3e3e; }
+  .liactive span {
+    background: #ff4700; }
+
 .registerTop {
   width: 990px;
   height: 48px;
@@ -50,7 +56,7 @@ li {
     width: 720px;
     margin: 0 auto; }
     .registerTop ul li {
-      width: 180px;
+      width: 360px;
       height: 48px;
       float: left;
       text-align: center;
@@ -69,70 +75,13 @@ li {
         color: white;
         background: #9b9696;
         margin-right: 5px; }
-    .registerTop ul li:nth-child(1) {
-      border-bottom: 2px solid #ff4700;
-      color: #3e3e3e; }
-      .registerTop ul li:nth-child(1) span {
-        background: #ff4700; }
 
 .registerBot {
   width: 990px;
   height: 500px;
   margin: 0 auto;
   box-sizing: border-box; }
-  .registerBot form .registerBotPhone {
-    display: none;
-    padding-left: 300px;
-    padding-top: 100px; }
-    .registerBot form .registerBotPhone select {
-      appearance: none;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      width: 162px;
-      padding: 0 8px;
-      height: 37px;
-      line-height: 34px;
-      border: 1px solid #cccccc;
-      box-sizing: border-box;
-      color: black;
-      cursor: pointer;
-      outline: none;
-      font-weight: bold; }
-    .registerBot form .registerBotPhone div:nth-child(1) input {
-      width: 162px;
-      padding: 0 8px;
-      height: 37px;
-      line-height: 34px;
-      border: 1px solid #cccccc;
-      box-sizing: border-box;
-      color: black;
-      cursor: pointer;
-      outline: none;
-      margin-left: -5px; }
-    .registerBot form .registerBotPhone div:nth-child(1) span {
-      display: none; }
-    .registerBot form .registerBotPhone div {
-      color: #3c3c3c; }
-    .registerBot form .registerBotPhone div:nth-child(2) {
-      padding-left: 73px;
-      padding-top: 50px; }
-      .registerBot form .registerBotPhone div:nth-child(2) input {
-        width: 162px;
-        padding: 0 8px;
-        height: 37px;
-        line-height: 34px;
-        border: 1px solid #cccccc;
-        box-sizing: border-box;
-        color: black;
-        cursor: pointer;
-        outline: none;
-        margin-left: -5px;
-        border-radius: 4px; }
-        .registerBot form .registerBotPhone div:nth-child(2) input:hover {
-          background: rgba(255, 0, 54, 0.8);
-          color: white; }
   .registerBot form .registerBotUser {
-    display: none;
     padding-left: 300px;
     padding-top: 100px; }
     .registerBot form .registerBotUser div div {
@@ -142,68 +91,58 @@ li {
         text-align: right;
         margin-right: 15px;
         float: left; }
-      .registerBot form .registerBotUser div div span {
-        float: left; }
     .registerBot form .registerBotUser div div:nth-child(1) {
       margin-bottom: 30px; }
+      .registerBot form .registerBotUser div div:nth-child(1) p {
+        color: #b4b4b4; }
+      .registerBot form .registerBotUser div div:nth-child(1) span {
+        color: #000;
+        float: left; }
+    .registerBot form .registerBotUser div div:nth-child(3) span {
+      color: #000;
+      float: left; }
+    .registerBot form .registerBotUser div div:nth-child(2) {
+      margin-bottom: 30px; }
+      .registerBot form .registerBotUser div div:nth-child(2) p {
+        color: #b4b4b4; }
     .registerBot form .registerBotUser div div:nth-child(2), .registerBot form .registerBotUser div div:nth-child(3), .registerBot form .registerBotUser div div:nth-child(5) {
       margin-bottom: 20px; }
-    .registerBot form .registerBotUser div div:nth-child(1) p, .registerBot form .registerBotUser div div:nth-child(2) p, .registerBot form .registerBotUser div div:nth-child(5) p {
-      color: #545454; }
-    .registerBot form .registerBotUser div div:nth-child(1) span, .registerBot form .registerBotUser div div:nth-child(2) span, .registerBot form .registerBotUser div div:nth-child(5) span {
+    .registerBot form .registerBotUser div div:nth-child(2) p, .registerBot form .registerBotUser div div:nth-child(5) p {
+      color: #b4b4b4; }
+    .registerBot form .registerBotUser div div:nth-child(2) span, .registerBot form .registerBotUser div div:nth-child(5) span {
+      color: #b4b4b4; }
+    .registerBot form .registerBotUser div div:nth-child(5) p {
       color: #b4b4b4; }
     .registerBot form .registerBotUser div div:nth-child(3) p, .registerBot form .registerBotUser div div:nth-child(4) p {
       color: #b4b4b4; }
-    .registerBot form .registerBotUser div div:nth-child(3) p, .registerBot form .registerBotUser div div:nth-child(4) p, .registerBot form .registerBotUser div div:nth-child(6) p {
-      line-height: 30px; }
     .registerBot form .registerBotUser div div:nth-child(4) {
-      margin-bottom: 50px; }
-    .registerBot form .registerBotUser div div:nth-child(6) {
-      margin-bottom: 30px; }
-      .registerBot form .registerBotUser div div:nth-child(6) p {
-        color: #b4b4b4; }
+      margin-bottom: 20px; }
     .registerBot form .registerBotUser div input {
-      width: 200px;
+      width: 250px;
       height: 30px;
-      padding-left: 10px; }
+      padding-left: 10px;
+      box-sizing: border-box; }
     .registerBot form .registerBotUser div input::-webkit-input-placeholder {
       color: #b4b4b4; }
-    .registerBot form .registerBotUser div div:nth-child(7) {
-      padding-left: 135px; }
-      .registerBot form .registerBotUser div div:nth-child(7) input {
-        width: 150px;
-        height: 30px;
-        background: #ff0036;
-        border: 0;
-        color: white;
-        border-radius: 4px;
-        cursor: pointer; }
-  .registerBot form .registerBotPay {
-    width: 990px;
-    height: 500px;
-    border: 1px solid #e6e6e6;
-    margin-top: 30px;
-    box-sizing: border-box;
-    display: none;
-    padding-top: 50px;
-    padding-left: 200px; }
-    .registerBot form .registerBotPay div {
+    .registerBot form .registerBotUser div .userDetail div {
       overflow: hidden;
       margin-bottom: 15px; }
-      .registerBot form .registerBotPay div p {
+      .registerBot form .registerBotUser div .userDetail div p {
         color: #929292;
         float: left;
         line-height: 30px;
         margin-right: 15px;
         width: 120px;
         text-align: right; }
-      .registerBot form .registerBotPay div input {
+      .registerBot form .registerBotUser div .userDetail div input {
         float: left;
-        width: 200px;
+        width: 250px;
         height: 30px;
         box-sizing: border-box;
         padding-left: 10px; }
-      .registerBot form .registerBotPay div select {
+      .registerBot form .registerBotUser div .userDetail div #shenfenId {
+        width: 180px; }
+      .registerBot form .registerBotUser div .userDetail div select {
         appearance: none;
         -moz-appearance: none;
         -webkit-appearance: none;
@@ -217,21 +156,22 @@ li {
         color: black;
         cursor: pointer;
         outline: none; }
-    .registerBot form .registerBotPay #agree {
+    .registerBot form .registerBotUser div .userDetail #agreeBtn {
       margin-left: 135px;
       width: 120px;
       height: 35px;
       border: 0;
-      background: #00a3d2;
+      background: #ff4700;
       line-height: 35px;
       color: white;
-      border-radius: 4px; }
-    .registerBot form .registerBotPay div:last-of-type {
+      border-radius: 4px;
+      margin-top: 15px; }
+    .registerBot form .registerBotUser div .userDetail div:last-of-type {
       margin-left: 135px;
       font-size: 12px;
       color: #333333;
       margin-top: 15px; }
-      .registerBot form .registerBotPay div:last-of-type a {
+      .registerBot form .registerBotUser div .userDetail div:last-of-type a {
         font-size: 12px;
         color: #3bb1d8; }
   .registerBot form .registerBotSuc {
@@ -240,7 +180,6 @@ li {
     border: 1px solid #e6e6e6;
     margin-top: 30px;
     box-sizing: border-box;
+    display: none;
     line-height: 500px;
     text-align: center; }
-
-/*# sourceMappingURL=register.css.map */
