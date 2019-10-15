@@ -106,6 +106,7 @@ function fadeInOut(inImg,outImg,timeLong){
                 font-size: 12px;
                 color: white;
                 text-align: center;
+                cursor:pointer;
             `;
             this.boxDom.appendChild(this.ulBox);
             for(let i=0;i<this.imgs.length;i++){

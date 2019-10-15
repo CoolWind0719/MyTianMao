@@ -1,0 +1,570 @@
+.goods {
+  width: 990px;
+  margin-left: 100px;
+  padding-top: 30px;
+  overflow: hidden; }
+  .goods .goodsLeft {
+    width: 418px;
+    float: left; }
+    .goods .goodsLeft .goodsLeft01 {
+      width: 418px;
+      height: 418px;
+      position: relative; }
+      .goods .goodsLeft .goodsLeft01 li {
+        width: 418px;
+        height: 418px;
+        position: absolute;
+        display: none; }
+        .goods .goodsLeft .goodsLeft01 li img {
+          width: 418px; }
+      .goods .goodsLeft .goodsLeft01 li:nth-child(1) {
+        display: block; }
+    .goods .goodsLeft .goodsLeft02 {
+      width: 418px;
+      height: 60px;
+      padding: 22px 9px 0; }
+      .goods .goodsLeft .goodsLeft02 li {
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-left: 20px;
+        box-sizing: border-box; }
+        .goods .goodsLeft .goodsLeft02 li img {
+          width: 100%; }
+      .goods .goodsLeft .goodsLeft02 li:nth-child(1) {
+        border: 1px solid #666666; }
+  .goods .goodsRit {
+    width: 530px;
+    overflow: hidden;
+    float: right;
+    padding-right: 20px;
+    box-sizing: border-box; }
+    .goods .goodsRit > p:nth-of-type(1) {
+      font-size: 16px;
+      font-weight: bold;
+      color: #000; }
+    .goods .goodsRit > p:nth-of-type(2) {
+      font-size: 14px;
+      color: #FF0036;
+      margin: 3px 0 10px 0; }
+    .goods .goodsRit .goodsRit01 > div:nth-child(1) {
+      width: 510px;
+      height: 40px;
+      background: #d8243a;
+      color: white;
+      text-align: center; }
+      .goods .goodsRit .goodsRit01 > div:nth-child(1) p {
+        float: left; }
+      .goods .goodsRit .goodsRit01 > div:nth-child(1) p:nth-of-type(1) {
+        font-size: 22px;
+        padding: 5px 10px 0 50px; }
+      .goods .goodsRit .goodsRit01 > div:nth-child(1) p:nth-of-type(2) {
+        font-size: 12px;
+        padding: 15px 0 0 10px; }
+      .goods .goodsRit .goodsRit01 > div:nth-child(1) span {
+        color: #fc0;
+        font-size: 12px; }
+    .goods .goodsRit .goodsRit01 > div:nth-child(2) {
+      width: 510px;
+      height: 78px;
+      box-sizing: border-box;
+      padding-top: 5px;
+      background: #f0efef;
+      position: relative; }
+      .goods .goodsRit .goodsRit01 > div:nth-child(2) > p:nth-of-type(1) span:nth-of-type(1) {
+        color: #999999;
+        font-size: 14px;
+        margin: 20px 50px 0 10px; }
+      .goods .goodsRit .goodsRit01 > div:nth-child(2) > p:nth-of-type(1) span:nth-of-type(2) {
+        color: #ff0036;
+        font-size: 16px; }
+      .goods .goodsRit .goodsRit01 > div:nth-child(2) > p:nth-of-type(1) span:nth-of-type(3) {
+        color: #ff0036;
+        font-size: 30px; }
+      .goods .goodsRit .goodsRit01 > div:nth-child(2) > p:nth-of-type(1) img {
+        margin-left: 5px; }
+      .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(1) {
+        overflow: hidden; }
+        .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(1) p:nth-of-type(1) {
+          float: left; }
+          .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(1) p:nth-of-type(1) span {
+            color: #999999;
+            font-size: 14px;
+            margin: 10px 13px 0 10px; }
+          .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(1) p:nth-of-type(1) span:nth-of-type(2) {
+            color: #ca781b;
+            font-size: 14px; }
+        .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(1) p:nth-of-type(2) {
+          float: right;
+          padding-right: 25px;
+          font-size: 14px;
+          color: #b5621b;
+          background: url(../images/goodsdetail03.jpg) no-repeat 58px 5px;
+          cursor: pointer; }
+      .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(2) {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 43px;
+        background: white;
+        box-sizing: border-box;
+        border: 1px solid #e5e5e5;
+        border-bottom: 0;
+        display: none; }
+        .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+          height: 40px;
+          border-bottom: 1px dashed #e5e5e5;
+          box-sizing: border-box;
+          padding-top: 10px; }
+          .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(2) > div:nth-of-type(1) p {
+            overflow: hidden; }
+          .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(1) {
+            float: left; }
+            .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(1) span {
+              font-size: 14px;
+              color: #8d8d8d; }
+            .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(1) span:nth-of-type(1) {
+              margin: 10px 30px 0 10px; }
+          .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(2) {
+            float: right;
+            font-size: 14px;
+            padding-right: 20px;
+            color: #8d8d8d;
+            background: url(../images/goodsdetail05.jpg) no-repeat 30px 5px;
+            cursor: pointer; }
+        .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(2) > ul:nth-of-type(1) {
+          width: 100%;
+          border-bottom: 1px dashed #e5e5e5; }
+          .goods .goodsRit .goodsRit01 > div:nth-child(2) > div:nth-of-type(2) > ul:nth-of-type(1) li {
+            height: 30px;
+            padding-left: 10px;
+            font-size: 12px;
+            color: #666666;
+            list-style: disc inside;
+            line-height: 30px; }
+    .goods .goodsRit .goodsRit02 {
+      width: 510px;
+      overflow: hidden; }
+      .goods .goodsRit .goodsRit02 > div:nth-of-type(1) {
+        font-size: 14px;
+        padding-top: 10px; }
+        .goods .goodsRit .goodsRit02 > div:nth-of-type(1) p {
+          padding-bottom: 7px; }
+        .goods .goodsRit .goodsRit02 > div:nth-of-type(1) p:nth-of-type(1) span:nth-of-type(1) {
+          color: #999999;
+          margin-right: 30px; }
+        .goods .goodsRit .goodsRit02 > div:nth-of-type(1) p:nth-of-type(1) span:nth-of-type(2), .goods .goodsRit .goodsRit02 > div:nth-of-type(1) p:nth-of-type(1) span:nth-of-type(3), .goods .goodsRit .goodsRit02 > div:nth-of-type(1) p:nth-of-type(1) span:nth-of-type(4) {
+          color: #333333; }
+        .goods .goodsRit .goodsRit02 > div:nth-of-type(1) p:nth-of-type(2) {
+          padding-left: 57px; }
+          .goods .goodsRit .goodsRit02 > div:nth-of-type(1) p:nth-of-type(2) span:nth-of-type(1) {
+            color: #333333; }
+          .goods .goodsRit .goodsRit02 > div:nth-of-type(1) p:nth-of-type(2) a {
+            margin-left: 5px;
+            font-size: 14px;
+            color: #333333; }
+        .goods .goodsRit .goodsRit02 > div:nth-of-type(1) p:nth-of-type(3) {
+          padding-left: 57px; }
+          .goods .goodsRit .goodsRit02 > div:nth-of-type(1) p:nth-of-type(3) span:nth-of-type(1) {
+            color: #333333; }
+          .goods .goodsRit .goodsRit02 > div:nth-of-type(1) p:nth-of-type(3) img {
+            width: 77px;
+            display: inline-block; }
+      .goods .goodsRit .goodsRit02 > div:nth-of-type(2) {
+        font-size: 14px;
+        padding-bottom: 10px; }
+        .goods .goodsRit .goodsRit02 > div:nth-of-type(2) p:nth-of-type(1) span:nth-of-type(1) {
+          color: #999999;
+          margin-right: 27px; }
+        .goods .goodsRit .goodsRit02 > div:nth-of-type(2) p:nth-of-type(1) span:nth-of-type(2) {
+          color: #333333;
+          font-size: 16px; }
+        .goods .goodsRit .goodsRit02 > div:nth-of-type(2) p:nth-of-type(1) span:nth-of-type(3) {
+          color: #666666; }
+    .goods .goodsRit .goodsRit03 {
+      width: 100%;
+      height: 38px;
+      box-sizing: border-box;
+      padding: 9px 0;
+      border-top: 1px dashed #c9c9c9;
+      border-bottom: 1px dashed #c9c9c9;
+      display: flex; }
+      .goods .goodsRit .goodsRit03 li {
+        flex: 1;
+        text-align: center;
+        line-height: 20px;
+        font-size: 14px;
+        box-sizing: border-box;
+        border-right: 1px solid #e5dfda; }
+      .goods .goodsRit .goodsRit03 li:nth-child(1) span:nth-of-type(1), .goods .goodsRit .goodsRit03 li:nth-child(2) span:nth-of-type(1) {
+        color: #999999; }
+      .goods .goodsRit .goodsRit03 li:nth-child(1) span:nth-of-type(2), .goods .goodsRit .goodsRit03 li:nth-child(2) span:nth-of-type(2) {
+        color: #ff0036; }
+      .goods .goodsRit .goodsRit03 li:nth-child(3) {
+        border-right: 0; }
+        .goods .goodsRit .goodsRit03 li:nth-child(3) span:nth-of-type(1) {
+          color: #999999; }
+        .goods .goodsRit .goodsRit03 li:nth-child(3) span:nth-of-type(2) {
+          color: #228800; }
+    .goods .goodsRit .goodsRit04 {
+      font-size: 14px;
+      padding: 20px 0 10px;
+      overflow: hidden; }
+      .goods .goodsRit .goodsRit04 p {
+        color: #838383;
+        float: left;
+        margin-right: 30px;
+        line-height: 30px; }
+      .goods .goodsRit .goodsRit04 ul li {
+        float: left;
+        width: 124px;
+        height: 30px;
+        box-sizing: border-box;
+        border: 1px solid #e2e1e3;
+        line-height: 30px;
+        text-align: center;
+        color: #000000;
+        font-size: 12px;
+        margin-right: 15px; }
+    .goods .goodsRit .goodsRit05 {
+      font-size: 14px;
+      color: #878787;
+      overflow: hidden; }
+      .goods .goodsRit .goodsRit05 p {
+        margin-right: 30px;
+        line-height: 30px; }
+      .goods .goodsRit .goodsRit05 p {
+        float: left; }
+      .goods .goodsRit .goodsRit05 p:nth-of-type(2) {
+        margin-left: 15px; }
+      .goods .goodsRit .goodsRit05 div:nth-of-type(1) {
+        float: left;
+        line-height: 30px; }
+        .goods .goodsRit .goodsRit05 div:nth-of-type(1) input {
+          width: 45px;
+          height: 30px;
+          outline: none;
+          border: 1px solid #a7a6ac;
+          padding-left: 5px;
+          float: left; }
+        .goods .goodsRit .goodsRit05 div:nth-of-type(1) div {
+          position: relative;
+          float: left;
+          width: 20px;
+          margin-left: 5px;
+          width: 30px;
+          height: 30px; }
+          .goods .goodsRit .goodsRit05 div:nth-of-type(1) div div {
+            width: 20px;
+            height: 12px;
+            text-align: center;
+            line-height: 12px;
+            position: absolute;
+            left: 0;
+            border: 1px solid #a7a6ac; }
+          .goods .goodsRit .goodsRit05 div:nth-of-type(1) div div:nth-of-type(1) {
+            top: 0; }
+          .goods .goodsRit .goodsRit05 div:nth-of-type(1) div div:nth-of-type(2) {
+            top: 18px; }
+    .goods .goodsRit .goodsRit06 {
+      padding: 20px 0 0 56px; }
+      .goods .goodsRit .goodsRit06 input {
+        width: 180px;
+        height: 40px;
+        box-sizing: border-box;
+        background: #ff0036;
+        line-height: 40px;
+        text-align: center;
+        font-size: 16px;
+        color: white;
+        border: 0;
+        outline: 0; }
+    .goods .goodsRit .goodsRit07 {
+      padding: 15px 0 0; }
+      .goods .goodsRit .goodsRit07 p span {
+        font-size: 14px;
+        color: #838383;
+        margin-right: 20px; }
+      .goods .goodsRit .goodsRit07 p {
+        font-size: 14px;
+        color: #886655; }
+    .goods .goodsRit .goodsRit08 {
+      width: 100%;
+      overflow: hidden; }
+      .goods .goodsRit .goodsRit08 div {
+        width: 190px;
+        height: 100px;
+        box-sizing: border-box;
+        float: right;
+        position: relative; }
+        .goods .goodsRit .goodsRit08 div p {
+          width: 100%;
+          text-align: right;
+          box-sizing: border-box;
+          padding: 5px 20px 10px 0;
+          font-size: 14px;
+          color: #666666;
+          background: url(../images/goodsdetail04.jpg) no-repeat right 11px; }
+        .goods .goodsRit .goodsRit08 div ul {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 10px 10px 5px;
+          border: 1px solid #e2e2e4;
+          overflow: hidden;
+          position: absolute;
+          left: 0;
+          top: 30px;
+          display: none; }
+          .goods .goodsRit .goodsRit08 div ul li {
+            width: 50%;
+            float: left;
+            box-sizing: border-box;
+            padding-left: 25px;
+            margin-bottom: 5px; }
+            .goods .goodsRit .goodsRit08 div ul li a {
+              font-size: 12px;
+              color: #666666; }
+          .goods .goodsRit .goodsRit08 div ul li:nth-of-type(1) {
+            background: url(../images/goodsdetail06.jpg) no-repeat left top; }
+          .goods .goodsRit .goodsRit08 div ul li:nth-of-type(2) {
+            background: url(../images/goodsdetail07.jpg) no-repeat left top; }
+          .goods .goodsRit .goodsRit08 div ul li:nth-of-type(3) {
+            background: url(../images/goodsdetail08.jpg) no-repeat left top; }
+          .goods .goodsRit .goodsRit08 div ul li:nth-of-type(4) {
+            background: url(../images/goodsdetail09.jpg) no-repeat left top; }
+
+.details {
+  width: 990px;
+  margin-left: 100px;
+  overflow: hidden; }
+  .details .detailsLeft {
+    width: 188px;
+    float: left; }
+    .details .detailsLeft a {
+      display: block;
+      width: 188px;
+      height: 170px;
+      margin-bottom: 10px; }
+      .details .detailsLeft a img {
+        width: 100%; }
+  .details .detailsRit {
+    width: 788px;
+    float: right;
+    position: relative; }
+    .details .detailsRit .detailsRitTop {
+      width: 788px;
+      height: 50px;
+      box-sizing: border-box;
+      border: 1px solid #d2d2d2; }
+      .details .detailsRit .detailsRitTop li {
+        height: 48px;
+        box-sizing: border-box;
+        float: left;
+        line-height: 48px;
+        cursor: pointer; }
+        .details .detailsRit .detailsRitTop li p {
+          height: 26px;
+          line-height: 26px;
+          margin: 11px 0;
+          padding: 0 25px;
+          border-right: 1px dashed #d2d2d2;
+          font-size: 14px;
+          color: #333333;
+          box-sizing: border-box; }
+      .details .detailsRit .detailsRitTop li:nth-child(1) {
+        border-left: 1px solid #cfbfb1;
+        border-right: 1px solid #cfbfb1;
+        border-top: 2px solid #ff0036; }
+        .details .detailsRit .detailsRitTop li:nth-child(1) p {
+          color: #ff0036;
+          border-right: 0; }
+    .details .detailsRit .detailsRitBot {
+      width: 790px;
+      height: 1800px; }
+      .details .detailsRit .detailsRitBot .detailsRitBot00 {
+        width: 790px;
+        height: 1800px;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        display: none;
+        overflow: hidden; }
+      .details .detailsRit .detailsRitBot .detailsRitBot01 {
+        display: block; }
+        .details .detailsRit .detailsRitBot .detailsRitBot01 > div:nth-of-type(2) {
+          width: 790px;
+          overflow: hidden; }
+          .details .detailsRit .detailsRitBot .detailsRitBot01 > div:nth-of-type(2) a {
+            display: block;
+            width: 790px; }
+            .details .detailsRit .detailsRitBot .detailsRitBot01 > div:nth-of-type(2) a img {
+              display: block;
+              width: 790px; }
+      .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02Score {
+        width: 788px;
+        height: 98px;
+        padding: 10px 0;
+        box-sizing: border-box;
+        border: 1px solid #c8c8c8; }
+        .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02Score > div:nth-child(1) {
+          width: 75px;
+          padding: 0 20px;
+          float: left;
+          font-size: 14px;
+          text-align: center;
+          border-right: 1px dashed #dddddd; }
+          .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02Score > div:nth-child(1) p:nth-child(1) {
+            color: #595b59; }
+          .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02Score > div:nth-child(1) p:nth-child(2) {
+            color: #ff6600;
+            font-size: 28px; }
+          .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02Score > div:nth-child(1) p:nth-child(3) {
+            color: #fdaa01; }
+        .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02Score > div:nth-child(2) {
+          width: 75px;
+          height: 62px;
+          padding: 0 20px;
+          float: left; }
+          .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02Score > div:nth-child(2) ul {
+            width: 550px;
+            height: 62px;
+            padding-top: 10px; }
+            .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02Score > div:nth-child(2) ul li {
+              width: 100px;
+              height: 18px;
+              padding: 0 10px;
+              border: 1px solid #ffd7dd;
+              border-radius: 4px;
+              font-size: 12px;
+              text-align: center;
+              line-height: 18px;
+              float: left;
+              margin-right: 15px;
+              margin-bottom: 10px;
+              box-shadow: 3px 3px #f2f2f2;
+              color: #ff0036; }
+              .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02Score > div:nth-child(2) ul li:hover {
+                background: #ffe2e2;
+                border: 1px solid #ff0036; }
+            .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02Score > div:nth-child(2) ul li:last-of-type {
+              color: #409280;
+              border: 1px solid #d3f4e4; }
+              .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02Score > div:nth-child(2) ul li:last-of-type:hover {
+                border: 1px solid #409280;
+                background: #d9f5ed; }
+      .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02PJ01 {
+        width: 788px;
+        height: 36px;
+        background: #efefef;
+        box-sizing: border-box;
+        border: 1px solid #c8c8c8;
+        padding: 10px 0 0 20px;
+        font-size: 12px; }
+      .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02PJ02 {
+        width: 790px;
+        height: 1000px; }
+        .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02PJ02 li {
+          width: 790px;
+          padding: 20px 20px;
+          box-sizing: border-box;
+          border-bottom: 1px solid #c8c8c8; }
+          .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02PJ02 li > p {
+            font-size: 12px;
+            color: #333333;
+            padding: 0 0 15px 0; }
+          .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02PJ02 li > div {
+            overflow: hidden; }
+            .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02PJ02 li > div div:nth-child(1) {
+              float: left;
+              color: #cccccc;
+              font-size: 12px; }
+              .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02PJ02 li > div div:nth-child(1) img {
+                display: block;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #f2f2f2; }
+            .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02PJ02 li > div div:nth-child(2) {
+              float: right;
+              font-size: 12px; }
+              .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02PJ02 li > div div:nth-child(2) p:nth-child(1) {
+                color: #404040; }
+              .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02PJ02 li > div div:nth-child(2) p:nth-child(2) {
+                color: #cc947e; }
+              .details .detailsRit .detailsRitBot .detailsRitBot02 .detailsRitBot02PJ02 li > div div:nth-child(2) span {
+                color: #999999; }
+      .details .detailsRit .detailsRitBot .detailsRitBot03 {
+        width: 790px; }
+        .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03fuwu {
+          width: 788px;
+          border: 1px solid #e5e5e7;
+          overflow: hidden;
+          box-sizing: border-box;
+          font-size: 12px; }
+          .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03fuwu li {
+            width: 33.333%;
+            box-sizing: border-box;
+            border-right: 1px solid #e5e5e7;
+            float: left;
+            padding: 30px 0; }
+            .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03fuwu li div {
+              float: left; }
+            .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03fuwu li div:nth-child(1) {
+              width: 40%;
+              text-align: center;
+              border-right: 1px solid #e6e6e6;
+              box-sizing: border-box; }
+            .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03fuwu li div:nth-child(2) {
+              width: 60%;
+              box-sizing: border-box;
+              padding: 0 20px; }
+          .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03fuwu li:nth-of-type(3) {
+            border-right: 0; }
+        .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03gouwu {
+          width: 788px;
+          padding: 0 20px;
+          box-sizing: border-box;
+          border: 1px solid #e6e6e6;
+          font-size: 14px; }
+          .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03gouwu p:nth-of-type(3) {
+            text-align: center; }
+          .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03gouwu .detailsRitBot03gouwuP {
+            width: 100%;
+            font-size: 28px;
+            color: #a52827;
+            text-align: center;
+            border-bottom: 1px solid #e5e5e7;
+            padding: 10px 0; }
+          .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03gouwu ul {
+            padding-top: 10px;
+            overflow: hidden; }
+          .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03gouwu li {
+            color: #404040;
+            padding-bottom: 10px; }
+          .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03gouwu div {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            padding-top: 15px; }
+        .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03note {
+          width: 786px;
+          border: 1px solid #ffcc7f;
+          margin-top: 30px;
+          background: #ffffe5;
+          font-size: 12px;
+          box-sizing: border-box;
+          padding: 0 20px; }
+          .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03note div:nth-child(1) {
+            border-bottom: 1px solid #ffe8ca; }
+          .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03note div {
+            overflow: hidden;
+            padding: 15px 0; }
+            .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03note div p {
+              float: left;
+              line-height: 18px; }
+            .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03note div p:nth-child(1) {
+              color: #404040;
+              font-weight: bold;
+              width: 70px; }
+            .details .detailsRit .detailsRitBot .detailsRitBot03 .detailsRitBot03note div p:nth-child(2) {
+              color: #706f6f;
+              width: 650px; }

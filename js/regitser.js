@@ -26,131 +26,52 @@ $(function(){
         }
     }
 
+    // 定义不同表单提示语
+    var userNote = "会员名规则：长度为3-16位";
+    var pwdNote = "密码规则：长度6-16位";
+    var banknumNote = "银行卡号规则：长度8位";
+    var bankuserNote = "姓名规则：长度为3-16位";
+    var shenfenNote = "身份证规则：16位数字";
+    var phoneNote = "手机号规则：11位数字";
+    var emailNote = "邮箱规则：6-16位数字字母";
+
     // 表单非空+前端验证
-    userInput.onblur = function(){
-        if(this.value == ""){
-            this.nextElementSibling.innerHTML = "此项不能为空，请输入";
-            this.nextElementSibling.style.color = "red";
-            return;
-        }
-        var str = userInput.value;
-        var result = checkReg("username",str);
-        if(result==true){
-            this.nextElementSibling.innerHTML = "✔";
-            this.nextElementSibling.style.color = "#b4b4b4";
-            return true;
-        }else{
-            this.nextElementSibling.innerHTML = "用户名规则：长度为4-16位";
-            this.nextElementSibling.style.color = "red";
-        }
-    }
-    pwdInput01.onblur = function(){
-        if(this.value == ""){
-            this.nextElementSibling.innerHTML = "此项不能为空，请输入";
-            this.nextElementSibling.style.color = "red";
-            return;
-        }
-        var str = pwdInput01.value;
-        var result = checkReg("password",str);
-        if(result==true){
-            this.nextElementSibling.innerHTML = "✔";
-            this.nextElementSibling.style.color = "#b4b4b4";
-            return true;
-        }else{
-            this.nextElementSibling.innerHTML = "密码规则：长度6-16位";
-            this.nextElementSibling.style.color = "red";
-        }
-    }
-    banknumInput.onblur = function(){
-        if(this.value == ""){
-            this.nextElementSibling.innerHTML = "此项不能为空，请输入";
-            this.nextElementSibling.style.color = "red";
-            return;
-        }
-        var str = banknumInput.value;
-        var result = checkReg("banknum",str);
-        if(result==true){
-            this.nextElementSibling.innerHTML = "✔";
-            this.nextElementSibling.style.color = "#b4b4b4";
-            return true;
-        }else{
-            this.nextElementSibling.innerHTML = "银行卡号规则：长度8位";
-            this.nextElementSibling.style.color = "red";
-        }
-    }
-    bankuserInput.onblur = function(){
-        if(this.value == ""){
-            this.nextElementSibling.innerHTML = "此项不能为空，请输入";
-            this.nextElementSibling.style.color = "red";
-            return;
-        }
-        var str = bankuserInput.value;
-        var result = checkReg("username",str);
-        if(result==true){
-            this.nextElementSibling.innerHTML = "✔";
-            this.nextElementSibling.style.color = "#b4b4b4";
-            return true;
-        }else{
-            this.nextElementSibling.innerHTML = "用户名规则：长度为4-16位";
-            this.nextElementSibling.style.color = "red";
-        }
-    }
-    shenfenId.onblur = function(){
-        if(this.value == ""){
-            this.nextElementSibling.innerHTML = "此项不能为空，请输入";
-            this.nextElementSibling.style.color = "red";
-            return;
-        }
-        var str = shenfenId.value;
-        var result = checkReg("card",str);
-        if(result==true){
-            this.nextElementSibling.innerHTML = "✔";
-            this.nextElementSibling.style.color = "#b4b4b4";
-            return true;
-        }else{
-            this.nextElementSibling.innerHTML = "身份证规则：16位数字";
-            this.nextElementSibling.style.color = "red";
-        }
-    }
-    phoneInput.onblur = function(){
-        if(this.value == ""){
-            this.nextElementSibling.innerHTML = "此项不能为空，请输入";
-            this.nextElementSibling.style.color = "red";
-            return;
-        }
-        var str = phoneInput.value;
-        var result = checkReg("phone",str);
-        if(result==true){
-            this.nextElementSibling.innerHTML = "✔";
-            this.nextElementSibling.style.color = "#b4b4b4";
-            return true;
-        }else{
-            this.nextElementSibling.innerHTML = "手机号规则：11位数字";
-            this.nextElementSibling.style.color = "red";
-        }
-    }
-    emailInput.onblur = function(){
-        if(this.value == ""){
-            this.nextElementSibling.innerHTML = "此项不能为空，请输入";
-            this.nextElementSibling.style.color = "red";
-            return;
-        }
-        var str = emailInput.value;
-        var result = checkReg("email",str);
-        if(result==true){
-            this.nextElementSibling.innerHTML = "✔";
-            this.nextElementSibling.style.color = "#b4b4b4";
-            return true;
-        }else{
-            this.nextElementSibling.innerHTML = "邮箱规则：6-16位数字字母";
-            this.nextElementSibling.style.color = "red";
+    fontCheck(userInput,"username",userNote);
+    fontCheck(pwdInput01,"password",pwdNote);
+    fontCheck(banknumInput,"banknum",banknumNote);
+    fontCheck(bankuserInput,"username",bankuserNote);
+    fontCheck(shenfenId,"card",shenfenNote);
+    fontCheck(phoneInput,"phone",phoneNote);
+    fontCheck(emailInput,"email",emailNote);
+
+    // 前端验证封装
+    // 功能：非空及合法性验证
+    // 参数：input
+    // 返回值：无
+    function fontCheck(domObj,regStr,note){
+        domObj.onblur = function(){
+            if(this.value == ""){
+                this.nextElementSibling.innerHTML = "此项不能为空，请输入";
+                this.nextElementSibling.style.color = "red";
+                return;
+            }
+            var str = domObj.value;
+            var result = checkReg(regStr,str);
+            if(result==true){
+                this.nextElementSibling.innerHTML = "✔";
+                this.nextElementSibling.style.color = "#b4b4b4";
+                return true;
+            }else{
+                this.nextElementSibling.innerHTML = note;
+                this.nextElementSibling.style.color = "red";
+            }
         }
     }
 
     //常用正则验证
     function checkReg(type,str){
         switch(type){
-            case "username": var reg = /^[a-zA-Z_]\w{3,15}$/;break;
+            case "username": var reg = /^[a-zA-Z_]\w{2,15}$/;break;
             case "email": var reg = /\w{6,16}@[a-zA-Z0-9]{2,5}.(com|cn|net|com.cn)$/;break;
             case "phone": var reg = /^1[0-9]{10}$/;break;
             case "password": var reg = /^\w{6,16}$/;break;
@@ -161,14 +82,6 @@ $(function(){
             default:;
         }
         return reg.test(str);
-    }
-
-    function isEmpty02(){
-        if(this.value == ""){
-            this.nextElementSibling.innerHTML = "此项不能为空，请输入";
-            this.nextElementSibling.style.color = "red";
-            return;
-        }
     }
 
     // 验证用户名，注册新用户

@@ -1,7 +1,7 @@
 $(function(){
     // nav
     var navLeftSpan = $(".navLeftSpan")[0];
-    welcomeUser();
+    welcomeUser(); 
     function welcomeUser(){
         let username = getCookie("username");
         if(username!=null){
@@ -9,6 +9,28 @@ $(function(){
         }else{
             navLeftSpan.innerHTML = "喵~";
         }
+    }
+    
+    //功能：获取cookie
+    //参数：键
+    //返回值：值
+    function getCookie(key){
+        let str = unescape(document.cookie);
+        let arr = str.split("; ");
+        for(let i=0;i<arr.length;i++){
+            if(arr[i].startsWith(key+"=")){           
+                let [,value] = arr[i].split("=");
+                return value;
+            }
+        }
+        return null;
+    }
+
+    //功能：删除cookie
+    //参数：键
+    //返回值：值
+    function delCookie(key){
+        setCookie(key,"",-1);
     }
 
     // header
