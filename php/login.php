@@ -3,7 +3,7 @@
     //1、接收前端的数据
 
     $userinput = $_POST['userinput'];
-    $userpass = $_POST['userpwd'];
+    $userpass = $_POST['userpwd']; 
 
     //2、处理
     //1)、链接数据库(搭桥)

@@ -37,24 +37,7 @@ $(function(){
 
 
 
-    // 商品选项卡
-    var goodsLeft01lis = $(".goodsLeft01li");
-    var goodsLeft02lis = $(".goodsLeft02li");
-    for(let i=0;i<goodsLeft01lis.length;i++){
-        goodsLeft01lis[i].setAttribute("index",i);
-    }
-    // goodsLeft01lis[0].style.display = "block";
-    for(let i=0;i<goodsLeft02lis.length;i++){ 
-        goodsLeft02lis[i].onclick = function(){
-            for(let j=0;j<goodsLeft02lis.length;j++){
-                goodsLeft02lis[j].style.border = "0";
-                goodsLeft01lis[j].style.display = "none";
-            }
-            let index = goodsLeft01lis[i].getAttribute("index");
-            goodsLeft02lis[index].style.border = "1px solid #666666";
-            goodsLeft01lis[index].style.display = "block";
-        }
-    }
+    
 
     // 商品-更多优惠
     var goodsRit01P01 = $(".goodsRit01P01")[0];
@@ -119,6 +102,112 @@ $(function(){
             this.style.borderRight = "1px solid #cfbfb1";
         }
     }
+
+    // ajax获取商品详情
+    
+    // 左侧banner图
+    var goodsLeft = $(".goodsLeft")[0];
+    // 商品描述
+    var goodsRitDesc = $(".goodsRitDesc")[0];
+    // 商品单价
+    var goodsRitPrice = $(".goodsRitPrice")[0];
+    // 商品重量
+    var goodsRitWeight = $(".goodsRitWeight")[0];
+    // 商品销量
+    var goodsRitCount = $(".goodsRitCount")[0];
+    // 商品评价
+    var goodsRitCharge = $(".goodsRitCharge")[0];
+    // 商品积分
+    var goodsRitScore = $(".goodsRitScore")[0];
+    // 商品型号1
+    var goodRitType01 = $(".goodRitType01")[0];
+    // 商品型号2
+    var goodRitType02 = $(".goodRitType02")[0];
+    // 商品库存
+    var goodRitSave = $(".goodRitSave")[0];
+    $.ajax({
+        "type": "post",
+        "url": "php/goodsinfo.php",
+        "data": "goodsId="+"10004",
+        "async": true,
+        "datatype": "json",
+        "error": function(){
+            console.log("出错了");
+        },
+        // "beforeSend":function(){
+        //     loadDiv.show();
+        // },
+        "success": showInfo,
+        // "complete": function(){
+        //     loadDiv.hide();
+        // }
+    })
+
+    function showInfo(response){
+        let objs = JSON.parse(response);
+        
+        // 左侧banner图
+        var lefthtmlstr = "";       
+        lefthtmlstr = `                
+            <ul class="goodsLeft01">
+                <li class="goodsLeft01li"><img src="${objs.beiyong1}" alt=""></li>
+                <li class="goodsLeft01li"><img src="${objs.beiyong2}" alt=""></li>
+                <li class="goodsLeft01li"><img src="${objs.beiyong3}" alt=""></li>
+                <li class="goodsLeft01li"><img src="${objs.beiyong4}" alt=""></li>
+                <li class="goodsLeft01li"><img src="${objs.beiyong5}" alt=""></li>
+            </ul>
+            <ul class="goodsLeft02">
+                <li class="goodsLeft02li"><img src="${objs.beiyong1}" alt=""></li>
+                <li class="goodsLeft02li"><img src="${objs.beiyong2}" alt=""></li>
+                <li class="goodsLeft02li"><img src="${objs.beiyong3}" alt=""></li>
+                <li class="goodsLeft02li"><img src="${objs.beiyong4}" alt=""></li>
+                <li class="goodsLeft02li"><img src="${objs.beiyong5}" alt=""></li>
+            </ul>                         
+        `;
+        goodsLeft.innerHTML = lefthtmlstr;
+
+        // 商品选项卡
+        var goodsLeft01lis = $(".goodsLeft01li");
+        var goodsLeft02lis = $(".goodsLeft02li");
+        for(let i=0;i<goodsLeft01lis.length;i++){
+            goodsLeft01lis[i].setAttribute("index",i);
+        }
+        // goodsLeft01lis[0].style.display = "block";
+        for(let i=0;i<goodsLeft02lis.length;i++){ 
+            goodsLeft02lis[i].onclick = function(){
+                for(let j=0;j<goodsLeft02lis.length;j++){
+                    goodsLeft02lis[j].style.border = "0";
+                    goodsLeft01lis[j].style.display = "none";
+                }
+                let index = goodsLeft01lis[i].getAttribute("index");
+                goodsLeft02lis[index].style.border = "1px solid #666666";
+                goodsLeft01lis[index].style.display = "block";
+            }
+        }
+
+
+
+
+        // 商品标题
+        goodsRitDesc.innerHTML = `${objs.goodsDesc}`;
+        // 商品单价
+        goodsRitPrice.innerHTML = `${objs.goodsPrice}`;
+        // 商品重量
+        goodsRitWeight.innerHTML = `${objs.beiyong6}`;
+        // 商品销量
+        goodsRitCount.innerHTML = `${objs.goodsCount}`;
+        // 商品评价
+        goodsRitCharge.innerHTML = `${objs.beiyong8}`;
+        // 商品积分
+        goodsRitScore.innerHTML = `${objs.beiyong9}`;
+        // 商品型号1
+        goodRitType01.innerHTML = `${objs.beiyong10}`;
+        // 商品型号2
+        goodRitType02.innerHTML = `${objs.beiyong11}`;
+        // 商品库存
+        goodRitSave.innerHTML = `${objs.beiyong7}`;
+    }
+
 
     // 右侧固定栏-返回顶部
     var backTopBtn = $(".rightFix_backTop")[0];

@@ -1,7 +1,9 @@
 $(function(){
+    
     // header
     // 地区选择
     // 获取元素
+    
     var headerCity01s = $(".headerCity01");
     var headerCtiyToplis = $(".headerCtiyTop ul li");
     var headerAera = $(".headerAera");
@@ -33,86 +35,6 @@ $(function(){
     }
     headerAera[0].onmouseleave = function(){
         headerAeraOthers[0].style.display = "none";
-    }
-    
-    //banner左侧
-    var bannerLeftlis = $(".bannerLeft>ul>li");
-    var bannerLeftItems = $(".bannerLeftItems");
-    for(let i=0;i<bannerLeftlis.length;i++){
-        bannerLeftlis[i].onmouseover = function(){
-            for(var j=0;j<bannerLeftlis.length;j++){
-                bannerLeftItems[j].style.display = "none";
-            }
-            bannerLeftItems[i].style.display = "block";
-        }
-        bannerLeftlis[i].onmouseout = function(){
-            for(var j=0;j<bannerLeftlis.length;j++){
-                bannerLeftItems[j].style.display = "none";
-            }
-        }
-    }
-
-    // 左侧固定栏
-    /*
-        1.页面滚动到楼层的scrollTop时，该li背景色，字体颜色变化
-        2.点击某个li时，页面滚动到该li对应的楼层
-    */
-    var leftFix = $(".leftFix")[0];
-    var leftFixlis = $(".leftFix>ul>li");
-    var leftFixlias = $(".leftFix>ul>li>a");
-    var lingshiFloors = $(".lingshi");   
-
-    // 楼层滑过
-    for(var i=0;i<leftFixlis.length;i++){        
-        leftFixlis[i].setAttribute("index",i);     
-        leftFixlis[i].onmouseenter = function(){
-            var index = this.getAttribute("index");            
-            for(var j=0;j<leftFixlis.length;j++){   
-                leftFixlis[j].style.backgroundColor = "white";
-                leftFixlias[j].style.color = "#9a9a9a";
-            }
-            leftFixlis[index].style.backgroundColor = "#e5374d";
-            leftFixlias[index].style.color = "white";
-        }
-    }
-
-    // 点击跳转楼层
-    for(var i=0;i<leftFixlis.length;i++){        
-        leftFixlis[i].setAttribute("index",i);     
-        leftFixlis[i].onclick = function(){
-            var index = this.getAttribute("index");
-            var lingshiTop = lingshiFloors[index].offsetTop;
-            $(window).scrollTop(lingshiTop);
-            for(var j=0;j<leftFixlis.length;j++){   
-                leftFixlis[j].style.backgroundColor = "white";
-                leftFixlias[j].style.color = "#9a9a9a";
-            }
-            leftFixlis[index].style.backgroundColor = "#e5374d";
-            leftFixlias[index].style.color = "white";
-        }
-    }
-
-    // 楼层高亮
-    window.onscroll = function(){
-        var pageScrollTop = document.documentElement.scrollTop || document.body.scrollTop;                    
-        for(var i=0;i<leftFixlis.length;i++){   
-            // 左侧栏显示/隐藏
-            if(pageScrollTop>=lingshiFloors[0].offsetTop){
-                leftFix.style.display = "block";
-            }
-            if(pageScrollTop<lingshiFloors[0].offsetTop){
-                leftFix.style.display = "none";
-            }
-            // 楼层高亮        
-            if(pageScrollTop >= lingshiFloors[i].offsetTop-50){
-                for(var j=0;j<leftFixlis.length;j++){   
-                    leftFixlis[j].style.backgroundColor = "white";
-                    leftFixlias[j].style.color = "#9a9a9a";
-                }
-                leftFixlis[i].style.backgroundColor = "#e5374d";
-                leftFixlias[i].style.color = "white";
-            }
-        }
     }
     
     // 右侧固定栏-返回顶部
@@ -198,8 +120,71 @@ $(function(){
             jjxxBtnSpan.html("更多选项");
             moreFlag = true;            
         }
-
     })
+
+    // ajax获取后端商品列表
+    var contentBox04Ul = $(".contentBox04>ul")[0];
+    var loadDiv = $("#loadDiv");
+    $.ajax({
+        "type": "post",
+        "url": "php/goodslist.php",
+        "data": "",
+        "async": true,
+        "datatype": "json",
+        "beforeSend":function(){
+            loadDiv.show();
+        },
+        "success": showGoods,
+        "complete": function(){
+            loadDiv.hide();
+        }
+    })
+    
+    function showGoods(response){
+        let objs = JSON.parse(response);
+        let htmlstr = "";
+        for(let i=0;i<objs.length;i++){
+            htmlstr += `
+                <li>
+                    <div>
+                        <a href="goodsdetail.html" class="testlilili"><img src="${objs[i].goodsImg}" alt=""></a>
+                        <a href="goodsdetail.html">${objs[i].goodsDesc}</a>
+                    </div>
+                    <p>总销量：<span>${objs[i].goodsCount}</span></p>
+                    <div>
+                        <span>￥${objs[i].goodsPrice}</span>
+                        <a href="shoppingcar.html"><img src="images/goodslist06.jpg" alt=""></a>
+                    </div> 
+                </li>                       
+            `;
+        }
+        contentBox04Ul.innerHTML = htmlstr;
+        
+        // $(".testlilili")[0].onclick = function(){
+        //     setCookie("goodId",objs[i].goodId,7);
+        //     location.href = "http://www.baidu.html";
+        //     return false;
+        // }
+    }
+
+    
+
+
+
+    //功能：设置cookie
+    //参数：键，值，过期天数，可访问路径，可访问域名
+    function setCookie(key,value,dayCount,path,domain){
+        let d = new Date();
+        d.setDate(d.getDate()+dayCount);
+        let str = `${key}=${value};expires=${d.toGMTString()};`;
+        document.cookie = str;
+        if(path!=undefined){
+            str += path;
+        }
+        if(domain!=undefined){
+            str += domain;
+        }
+    }
 })
 
 

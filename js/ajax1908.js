@@ -2,8 +2,7 @@
 //参数
 //   method/url/datas/isAsyn/func
 //返回值：无
-
-function ajax1908(method,url,datas,isAsyn,func){
+export function ajax1908(method,url,datas,isAsyn,func){
     
     //创建xhr对象
     let xhr = new XMLHttpRequest();
@@ -31,7 +30,7 @@ function ajax1908(method,url,datas,isAsyn,func){
     }
 }
 
-function ajax1908Andobject(obj){    
+export function ajax1908Andobject(obj){    
     let defaultObj = {
         "method": "get",
         "url": "#",
@@ -69,7 +68,7 @@ function ajax1908Andobject(obj){
 
 
 //利用Promise封装ajax
-function ajax1908Andpromise(obj){
+export function ajax1908Andpromise(obj){
     
     let defaultObj = {
         "method": "get",

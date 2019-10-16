@@ -1,0 +1,163 @@
+.shoppingcar {
+  width: 990px;
+  margin: 0 auto; }
+  .shoppingcar .shoppingcarTop {
+    width: 990px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+    position: relative; }
+    .shoppingcar .shoppingcarTop > ul {
+      width: 372px;
+      height: 40px;
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      bottom: -1px; }
+      .shoppingcar .shoppingcarTop > ul li {
+        width: 124px;
+        height: 40px;
+        line-height: 20px;
+        text-align: center;
+        box-sizing: border-box;
+        float: left;
+        padding: 10px 0; }
+        .shoppingcar .shoppingcarTop > ul li p {
+          width: 100%;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          box-sizing: border-box;
+          border-right: 1px solid #e8e8e8;
+          color: #3c3c3c; }
+      .shoppingcar .shoppingcarTop > ul li:last-of-type p {
+        border-right: 0; }
+      .shoppingcar .shoppingcarTop > ul li:first-of-type {
+        border-bottom: 1px solid red; }
+        .shoppingcar .shoppingcarTop > ul li:first-of-type p {
+          color: #ff4400; }
+    .shoppingcar .shoppingcarTop > div {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      font-size: 12px; }
+      .shoppingcar .shoppingcarTop > div div span:nth-of-type(1) {
+        color: #3c3c3c; }
+      .shoppingcar .shoppingcarTop > div div span:nth-of-type(2), .shoppingcar .shoppingcarTop > div div span:nth-of-type(3) {
+        color: #ff4452; }
+      .shoppingcar .shoppingcarTop > div div span:nth-of-type(3) {
+        font-weight: bold; }
+      .shoppingcar .shoppingcarTop > div div input {
+        width: 55px;
+        height: 24px;
+        background: #ff4400;
+        color: white;
+        border-radius: 3px;
+        border: 0; }
+  .shoppingcar .shoppingcarBox {
+    width: 990px;
+    overflow: hidden; }
+    .shoppingcar .shoppingcarBox .shoppingcarBoxTop {
+      font-size: 12px;
+      color: #3c3c3c;
+      padding: 20px 0;
+      overflow: hidden; }
+      .shoppingcar .shoppingcarBox .shoppingcarBoxTop input {
+        margin: 0 0 0 10px; }
+      .shoppingcar .shoppingcarBox .shoppingcarBoxTop span:nth-of-type(1) {
+        padding-left: 90px;
+        padding-right: 318px; }
+      .shoppingcar .shoppingcarBox .shoppingcarBoxTop span:nth-of-type(2), .shoppingcar .shoppingcarBox .shoppingcarBoxTop span:nth-of-type(3), .shoppingcar .shoppingcarBox .shoppingcarBoxTop span:nth-of-type(4), .shoppingcar .shoppingcarBox .shoppingcarBoxTop span:nth-of-type(5) {
+        padding-right: 80px; }
+    .shoppingcar .shoppingcarBox .shoppingcarBoxCont li {
+      background: #fff8e1;
+      border: 1px solid #cccccc;
+      border-top: 0;
+      overflow: hidden;
+      padding: 30px 0; }
+      .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div {
+        float: left;
+        font-size: 12px; }
+      .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(1) {
+        padding-left: 15px; }
+        .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(1) input {
+          padding-bottom: 50px; }
+      .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(2) {
+        padding: 0 10px; }
+        .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(2) img {
+          width: 80px;
+          height: 80px; }
+      .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(3) {
+        padding: 0 180px 0 0; }
+        .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(3) a {
+          display: block;
+          width: 190px;
+          color: #3c3c3c; }
+          .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(3) a:hover {
+            color: #e48e13; }
+      .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(4) {
+        padding: 0 10px 0 0;
+        color: #000; }
+      .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(5) {
+        padding: 0 10px 0 43px; }
+        .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(5) input:nth-child(1), .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(5) input:nth-child(3) {
+          width: 15px;
+          height: 20px; }
+        .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(5) input:nth-child(2) {
+          width: 40px;
+          height: 20px; }
+      .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(6) {
+        padding: 0 62px 0 32px; }
+        .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(6) p:nth-of-type(1) {
+          color: #ff4400; }
+        .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(6) p:nth-of-type(2) {
+          color: #9c9c9c; }
+      .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(7) {
+        cursor: pointer; }
+        .shoppingcar .shoppingcarBox .shoppingcarBoxCont li > div:nth-of-type(7):hover {
+          color: #ff4400; }
+    .shoppingcar .shoppingcarBox .shoppingcarBoxCont > li:nth-of-type(1) {
+      border: 1px solid #cccccc; }
+  .shoppingcar .shoppingcarBot {
+    width: 990px;
+    height: 50px;
+    line-height: 50px;
+    background: #e5e5e5;
+    box-sizing: border-box;
+    font-size: 12px;
+    margin: 30px 0;
+    position: relative; }
+    .shoppingcar .shoppingcarBot label:nth-of-type(1) {
+      padding-left: 10px; }
+    .shoppingcar .shoppingcarBot > span:nth-of-type(1) {
+      padding: 0 0 0 20px; }
+    .shoppingcar .shoppingcarBot > span:nth-of-type(2) {
+      padding: 0 20px; }
+    .shoppingcar .shoppingcarBot > span:nth-of-type(3) {
+      padding: 0 339px 0 0; }
+    .shoppingcar .shoppingcarBot > span:nth-of-type(1), .shoppingcar .shoppingcarBot > span:nth-of-type(2), .shoppingcar .shoppingcarBot > span:nth-of-type(3) {
+      cursor: pointer; }
+      .shoppingcar .shoppingcarBot > span:nth-of-type(1):hover, .shoppingcar .shoppingcarBot > span:nth-of-type(2):hover, .shoppingcar .shoppingcarBot > span:nth-of-type(3):hover {
+        color: #ff4400; }
+    .shoppingcar .shoppingcarBot > span:nth-of-type(4) {
+      padding: 0 10px; }
+      .shoppingcar .shoppingcarBot > span:nth-of-type(4) span {
+        color: #ff4400; }
+    .shoppingcar .shoppingcarBot > span:nth-of-type(5) {
+      padding: 0 0 0 10px; }
+    .shoppingcar .shoppingcarBot > span:nth-of-type(7) {
+      padding: 0 10px 0 0;
+      font-size: 24px;
+      color: #ff4400; }
+    .shoppingcar .shoppingcarBot > input:nth-of-type(1) {
+      width: 120px;
+      height: 50px;
+      background: #ff4400;
+      color: white;
+      font-size: 24px;
+      border: 0;
+      position: absolute;
+      right: 0;
+      top: 0; }
+      .shoppingcar .shoppingcarBot > input:nth-of-type(1):hover {
+        background: #ec4002; }
