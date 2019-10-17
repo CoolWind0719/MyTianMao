@@ -1,4 +1,34 @@
 $(function(){
+    // 获取登录用户
+    var navLeftSpan = $(".navLeftSpan")[0];
+    var navLogin = $(".navLogin")[0];
+    var navRigster = $(".navRigster")[0];
+    welcomeUser(); 
+    function welcomeUser(){
+        let username = getCookie("username");
+        if(username!=null){
+            navLeftSpan.innerHTML = username;
+            navLogin.style.display = "none";
+            navRigster.style.display = "none";
+        }else{
+            navLeftSpan.innerHTML = "喵~";
+        }
+    }
+    
+    //功能：获取cookie
+    //参数：键
+    //返回值：值
+    function getCookie(key){
+        let str = unescape(document.cookie);
+        let arr = str.split("; ");
+        for(let i=0;i<arr.length;i++){
+            if(arr[i].startsWith(key+"=")){           
+                let [,value] = arr[i].split("=");
+                return value;
+            }
+        }
+        return null;
+    }
 
     // 地区选择
     // 获取元素
@@ -125,22 +155,26 @@ $(function(){
     var goodRitType02 = $(".goodRitType02")[0];
     // 商品库存
     var goodRitSave = $(".goodRitSave")[0];
+
+    // 地址栏中的商品ID
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    };
+    var listGoodsId = getUrlParam("data-goodsId");
+    console.log(listGoodsId);
+
     $.ajax({
         "type": "post",
         "url": "php/goodsinfo.php",
-        "data": "goodsId="+"10004",
+        "data": "goodsId="+listGoodsId,
         "async": true,
         "datatype": "json",
         "error": function(){
             console.log("出错了");
         },
-        // "beforeSend":function(){
-        //     loadDiv.show();
-        // },
-        "success": showInfo,
-        // "complete": function(){
-        //     loadDiv.hide();
-        // }
+        "success": showInfo
     })
 
     function showInfo(response){

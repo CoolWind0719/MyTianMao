@@ -19,9 +19,9 @@
             <div class="navLeft">
                 <ul>
                     <li><a href="">天猫首页</a></li>
-                    <li>喵，欢迎来到天猫</li>
-                    <li><a href="login.html">请登录</a></li>
-                    <li><a href="register.html">免费注册</a></li>
+                    <li><span class="navLeftSpan">喵~</span>，欢迎来到天猫</li>
+                    <li class="navLogin"><a href="login.html">请登录</a></li>
+                    <li class="navRigster"><a href="register.html">免费注册</a></li>
                 </ul>
             </div>
             <div class="navRit">
@@ -518,7 +518,7 @@
     <div class="shoppingcar">
         <div class="shoppingcarTop">
             <ul>
-                <li><p>全部商品<span>2</span></p></li>
+                <li><p>全部商品<span class="shoppingcarTopCount"></span></p></li>
                 <li><p>降价商品<span>0</span></p></li>
                 <li><p>库存紧张<span>0</span></p></li>
             </ul>
@@ -531,7 +531,8 @@
         </div>
         <div class="shoppingcarBox">
             <div class="shoppingcarBoxTop">
-                <input type="checkbox" id="shoppingcarBoxAll01"><label for="shoppingcarBoxAll01">全选</label>
+                <input type="checkbox" id="shoppingcarBoxAll01" class="allCheckBox1">
+                <label for="shoppingcarBoxAll01">全选</label>
                 <span>商品信息</span>
                 <span>单价</span>
                 <span>数量</span>
@@ -539,7 +540,7 @@
                 <span>操作</span>
             </div>
             <ul class="shoppingcarBoxCont">
-                <li>
+                <!-- <li>
                     <div>
                         <input type="checkbox">
                     </div> 
@@ -586,18 +587,19 @@
                     <div>
                         删除
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="shoppingcarBot">
-            <label for="shoppingcarBotAll02"><input type="checkbox" id="shoppingcarBotAll02">全选</label>
+            <input type="checkbox" id="shoppingcarBotAll02" class="allCheckBox2">
+            <label for="shoppingcarBotAll02">全选</label>
             <span>删除</span>
             <span>移入收藏夹</span>
             <span>分享</span>
-            <span>已选商品<span>2</span>件</span>
+            <span>已选商品<span class="shoppingcarBotCount">0</span>件</span>
             <span>合计(不含运费)：</span>
             <span>￥</span>
-            <span>152.00</span>
+            <span class="shoppingcarBotTotalMoney">0</span>
             <input type="button" value="结算">
         </div>
     </div>
@@ -743,4 +745,5 @@
 </body>
 </html>
 <script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/checkbox.js"></script>
 <script src="js/shoppingcar.js"></script>

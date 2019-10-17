@@ -1,11 +1,15 @@
 $(function(){
-    // nav
+    // nav 
     var navLeftSpan = $(".navLeftSpan")[0];
+    var navLogin = $(".navLogin")[0];
+    var navRigster = $(".navRigster")[0];
     welcomeUser(); 
     function welcomeUser(){
         let username = getCookie("username");
         if(username!=null){
             navLeftSpan.innerHTML = username;
+            navLogin.style.display = "none";
+            navRigster.style.display = "none";
         }else{
             navLeftSpan.innerHTML = "喵~";
         }

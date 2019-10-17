@@ -1,5 +1,37 @@
 $(function(){
     
+    // 获取登录用户
+    var navLeftSpan = $(".navLeftSpan")[0];
+    var navLogin = $(".navLogin")[0];
+    var navRigster = $(".navRigster")[0];
+    welcomeUser(); 
+    function welcomeUser(){
+        let username = getCookie("username");
+        if(username!=null){
+            navLeftSpan.innerHTML = username;
+            navLogin.style.display = "none";
+            navRigster.style.display = "none";
+        }else{
+            navLeftSpan.innerHTML = "喵~";
+        }
+    }
+    
+    //功能：获取cookie
+    //参数：键
+    //返回值：值
+    function getCookie(key){
+        let str = unescape(document.cookie);
+        let arr = str.split("; ");
+        for(let i=0;i<arr.length;i++){
+            if(arr[i].startsWith(key+"=")){           
+                let [,value] = arr[i].split("=");
+                return value;
+            }
+        }
+        return null;
+    }
+
+
     // header
     // 地区选择
     // 获取元素
@@ -145,46 +177,76 @@ $(function(){
         let htmlstr = "";
         for(let i=0;i<objs.length;i++){
             htmlstr += `
-                <li>
+                <li data-goodsId=${objs[i].goodsId}>
                     <div>
-                        <a href="goodsdetail.html" class="testlilili"><img src="${objs[i].goodsImg}" alt=""></a>
-                        <a href="goodsdetail.html">${objs[i].goodsDesc}</a>
+                        <a href="goodsdetail.html?data-goodsId=${objs[i].goodsId}"><img src="${objs[i].goodsImg}" alt=""></a>
+                        <a href="goodsdetail.html?data-goodsId=${objs[i].goodsId}">${objs[i].goodsDesc}</a>
                     </div>
                     <p>总销量：<span>${objs[i].goodsCount}</span></p>
                     <div>
                         <span>￥${objs[i].goodsPrice}</span>
-                        <a href="shoppingcar.html"><img src="images/goodslist06.jpg" alt=""></a>
+                        <a href="goods" class="addShopCar"><img src="images/goodslist06.jpg" alt="" ></a>
                     </div> 
                 </li>                       
             `;
         }
         contentBox04Ul.innerHTML = htmlstr;
-        
-        // $(".testlilili")[0].onclick = function(){
-        //     setCookie("goodId",objs[i].goodId,7);
-        //     location.href = "http://www.baidu.html";
-        //     return false;
-        // }
+
+        // ajax添加购物车商品
+        var addShopCar = $(".addShopCar");   
+        var shopcarNote = $(".shopcarNote")[0]; 
+        var shopcarNoteP = $(".shopcarNoteP")[0];
+        for(var i=0;i<addShopCar.length;i++){
+            addShopCar[i].onclick = function(){
+                var vipName = getCookie("username");
+                var parentLi = this.parentNode.parentNode;
+                var goodsId = parentLi.getAttribute("data-goodsId");
+                var goodsCount = 1;
+                var goodsPrice = this.previousElementSibling.innerHTML;
+                var goodsImg = parentLi.firstElementChild.firstElementChild.firstElementChild.getAttribute("src");
+                var goodsDesc =  parentLi.firstElementChild.lastElementChild.innerHTML;
+
+                $.ajax({
+                    "type": "post",
+                    "url": "php/addShopCar.php",
+                    "data": {
+                        "vipName": vipName,
+                        "goodsId": goodsId,
+                        "goodsPrice": goodsPrice,
+                        "goodsCount": goodsCount,
+                        "goodsImg": goodsImg,
+                        "goodsDesc": goodsDesc
+                    },
+                    "async": true,
+                    "datatype": "json",
+                    "success": shopcarShow
+                })
+
+                function shopcarShow(response){
+                    if(response==1){
+                        shopcarNote.style.display = "block";
+                        shopcarNote.style.innerHTML = "商品添加成功！";
+                    }else if(response==0){
+                        shopcarNote.style.display = "block";
+                        shopcarNote.style.innerHTML = "商品添加失败，请登录！";
+                    }else{
+                        alert("出错了");
+                    }
+
+                }
+                shopcarNoteP.onclick = function(){
+                    shopcarNote.style.display = "none";
+                }
+            }
+        }
+
+
+
     }
+
+
 
     
-
-
-
-    //功能：设置cookie
-    //参数：键，值，过期天数，可访问路径，可访问域名
-    function setCookie(key,value,dayCount,path,domain){
-        let d = new Date();
-        d.setDate(d.getDate()+dayCount);
-        let str = `${key}=${value};expires=${d.toGMTString()};`;
-        document.cookie = str;
-        if(path!=undefined){
-            str += path;
-        }
-        if(domain!=undefined){
-            str += domain;
-        }
-    }
 })
 
 
