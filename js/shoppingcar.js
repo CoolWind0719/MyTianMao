@@ -82,6 +82,7 @@ $(function(){
     // ajax获取购物车数据
     var shoppingcarBoxCont = $(".shoppingcarBoxCont")[0];
     var vipName = getCookie("username");
+    var loadDiv = $("#loadDiv")[0];
     $.ajax({
         "type": "post",
         "url": "php/getShopCar.php",
@@ -93,7 +94,13 @@ $(function(){
         "error": function(){
             console.log("出错了");
         },
-        "success": showCar
+        "beforeSend":function(){
+            loadDiv.style.display = "block";
+        },
+        "success": showCar,
+        "complete":function(){
+            loadDiv.style.display = "none";
+        }
     })
     
     function showCar(response){
@@ -215,9 +222,10 @@ $(function(){
                 }
             }
             $(".shoppingcarBotTotalMoney").html(money);
+            $(".shoppingcarTopMoney").html(money);
         }
 
-        // 删除购物车
+        // 删除购物车---删除li之后，总价未更新
         var btnDel = $(".btnDel");
         btnDel.click(function(){
             var goodsId = this.parentNode.getAttribute("data-goodsId");
@@ -239,15 +247,12 @@ $(function(){
             function delCar(response){
                 if(response==1){
                     var chooseLi = that.parentNode;
+                    calMoney();
                     chooseLi.style.display = "none";
                 }
+                
             }
         })
-
-
-
-
-
     }
 
     // 右侧固定栏-返回顶部

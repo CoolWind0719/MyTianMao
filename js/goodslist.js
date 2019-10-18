@@ -185,7 +185,7 @@ $(function(){
                     <p>总销量：<span>${objs[i].goodsCount}</span></p>
                     <div>
                         <span>￥${objs[i].goodsPrice}</span>
-                        <a href="goods" class="addShopCar"><img src="images/goodslist06.jpg" alt="" ></a>
+                        <a href="shoppingcar.html" class="addShopCar"><img src="images/goodslist06.jpg" alt="" ></a>
                     </div> 
                 </li>                       
             `;
