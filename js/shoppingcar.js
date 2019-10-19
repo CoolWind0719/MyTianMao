@@ -196,6 +196,20 @@ $(function(){
             getcheckNum($(this));
         });
 
+        // 手动输入商品数量
+        $(".goodsNum").blur(function(){
+            // 单价
+            let price = $(this).parent().prev().children().last().html();
+            // 数量
+            let count = $(this).val();
+            // 单类商品总价
+            let oneTotal = $(this).parent().next().children().children().last();
+            let oneTotalMoney = price * count;
+            oneTotal.html(oneTotalMoney);
+            // 所有商品总价
+            calMoney();
+        })
+
         // 全选
         $(".allCheckBox1").bindCheckBox($(".shoppingcarBoxCont :checkbox"),calMoney);
         $(".allCheckBox2").bindCheckBox($(".shoppingcarBoxCont :checkbox"),calMoney);
@@ -247,7 +261,12 @@ $(function(){
             function delCar(response){
                 if(response==1){
                     var chooseLi = that.parentNode;
-                    calMoney();
+                    var choosediv = chooseLi.firstElementChild;
+                    var chooseinput = choosediv.firstElementChild;
+                    if(chooseinput.checked){
+                        chooseinput.checked = false;
+                        calMoney();
+                    }            
                     chooseLi.style.display = "none";
                 }
                 

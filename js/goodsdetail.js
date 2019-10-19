@@ -133,6 +133,69 @@ $(function(){
         }
     }
 
+    // 商品活动倒计时
+    var countdown = $(".countdown")[0];
+    var daysdown = $(".countdown").children().eq(0);
+    var hoursdown = $(".countdown").children().eq(1);
+    var minutesdown = $(".countdown").children().eq(2);
+    var secondsdown = $(".countdown").children().eq(3);
+    var currentDate = new Date();
+    var targetDate = new Date();
+    targetDate.setFullYear(2020);
+    targetDate.setMonth(0);
+    targetDate.setDate(25);
+    targetDate.setHours(0);
+    targetDate.setMinutes(0);
+    targetDate.setSeconds(0);
+    var timeArr = getSecondCha(targetDate,currentDate);
+    var days =  timeArr[0];
+    var hours = timeArr[1];
+    var minutes = timeArr[2];
+    var seconds = timeArr[3];
+    setInterval(function(){
+        seconds--;
+        if(seconds==-1){
+            minutes--;
+            if(minutes==-1){
+                hours--;
+                if(hours==-1){
+                    days--;
+                    if(days==-1){
+                        days = 0;
+                    }
+                    hours = 23;
+                }
+                minutes = 59;
+            }
+            seconds = 59;
+        }
+        daysdown.html(days);
+        hoursdown.html(hours);
+        minutesdown.html(minutes);
+        secondsdown.html(seconds);
+    },1000)
+
+    // 获取日期差
+    
+    function getSecondCha(date1,date2){
+        var arr = [];
+        var time1 = date1.getTime();
+        var time2 = date2.getTime();
+        var shijiancha = time1-time2; 
+        var days = shijiancha / 1000 / 60 / 60 / 24;
+        var daysRound = Math.floor(days);
+        arr.push(daysRound);
+        var hours = shijiancha/ 1000 / 60 / 60 - (24 * daysRound);
+        var hoursRound = Math.floor(hours);
+        arr.push(hoursRound);
+        var minutes = shijiancha / 1000 /60 - (24 * 60 * daysRound) - (60 * hoursRound);
+        var minutesRound = Math.floor(minutes);
+        arr.push(minutesRound);
+        var seconds = shijiancha/ 1000 - (24 * 60 * 60 * daysRound) - (60 * 60 * hoursRound) - (60 * minutesRound); 
+        arr.push(seconds);
+        return arr;
+    }
+
     // ajax获取商品详情
     
     // 左侧banner图
@@ -184,18 +247,18 @@ $(function(){
         var lefthtmlstr = "";       
         lefthtmlstr = `                
             <ul class="goodsLeft01">
-                <li class="goodsLeft01li"><img src="${objs.beiyong1}" alt=""></li>
-                <li class="goodsLeft01li"><img src="${objs.beiyong2}" alt=""></li>
-                <li class="goodsLeft01li"><img src="${objs.beiyong3}" alt=""></li>
-                <li class="goodsLeft01li"><img src="${objs.beiyong4}" alt=""></li>
-                <li class="goodsLeft01li"><img src="${objs.beiyong5}" alt=""></li>
+                <li class="goodsLeft01li goodsLeft01liimg1"><img src="${objs.beiyong1}" alt=""></li>
+                <li class="goodsLeft01li goodsLeft01liimg2"><img src="${objs.beiyong2}" alt=""></li>
+                <li class="goodsLeft01li goodsLeft01liimg3"><img src="${objs.beiyong3}" alt=""></li>
+                <li class="goodsLeft01li goodsLeft01liimg4"><img src="${objs.beiyong4}" alt=""></li>
+                <li class="goodsLeft01li goodsLeft01liimg5"><img src="${objs.beiyong5}" alt=""></li>
             </ul>
             <ul class="goodsLeft02">
-                <li class="goodsLeft02li"><img src="${objs.beiyong1}" alt=""></li>
-                <li class="goodsLeft02li"><img src="${objs.beiyong2}" alt=""></li>
-                <li class="goodsLeft02li"><img src="${objs.beiyong3}" alt=""></li>
-                <li class="goodsLeft02li"><img src="${objs.beiyong4}" alt=""></li>
-                <li class="goodsLeft02li"><img src="${objs.beiyong5}" alt=""></li>
+                <li class="goodsLeft02li goodsLeft02liimg1"><img src="${objs.beiyong1}" alt=""></li>
+                <li class="goodsLeft02li goodsLeft02liimg2"><img src="${objs.beiyong2}" alt=""></li>
+                <li class="goodsLeft02li goodsLeft02liimg3"><img src="${objs.beiyong3}" alt=""></li>
+                <li class="goodsLeft02li goodsLeft02liimg4"><img src="${objs.beiyong4}" alt=""></li>
+                <li class="goodsLeft02li goodsLeft02liimg5"><img src="${objs.beiyong5}" alt=""></li>
             </ul>                         
         `;
         goodsLeft.innerHTML = lefthtmlstr;
@@ -219,7 +282,56 @@ $(function(){
             }
         }
 
+        // 商品放大镜
+        new Mirror($(".goodsLeft01liimg1")[0],{
+            width:120,
+            height:120,
+            color:"blue",
+            opacity:0.1,
+            beiShu:2,
+            isCircle:false,
+            "img":`${objs.beiyong1}`
+        },$(".goodsLeft01")[0]);
 
+        // new Mirror($(".goodsLeft01liimg2")[0],{
+        //     width:120,
+        //     height:120,
+        //     color:"blue",
+        //     opacity:0.1,
+        //     beiShu:2,
+        //     isCircle:false,
+        //     "img":`${objs.beiyong1}`
+        // },$(".goodsLeft01")[0]);
+
+        // new Mirror($(".goodsLeft01liimg3")[0],{
+        //     width:120,
+        //     height:120,
+        //     color:"blue",
+        //     opacity:0.1,
+        //     beiShu:2,
+        //     isCircle:false,
+        //     "img":`${objs.beiyong1}`
+        // },$(".goodsLeft01")[0]);
+
+        // new Mirror($(".goodsLeft01liimg4")[0],{
+        //     width:120,
+        //     height:120,
+        //     color:"blue",
+        //     opacity:0.1,
+        //     beiShu:2,
+        //     isCircle:false,
+        //     "img":`${objs.beiyong1}`
+        // },$(".goodsLeft01")[0]);
+
+        // new Mirror($(".goodsLeft01liimg5")[0],{
+        //     width:120,
+        //     height:120,
+        //     color:"blue",
+        //     opacity:0.1,
+        //     beiShu:2,
+        //     isCircle:false,
+        //     "img":`${objs.beiyong1}`
+        // },$(".goodsLeft01")[0]);
 
 
         // 商品标题
